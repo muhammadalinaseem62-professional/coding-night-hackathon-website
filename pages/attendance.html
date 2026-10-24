@@ -1,0 +1,317 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Attendance Management | HCM Lite</title>
+
+  <!-- Bootstrap CSS only: JavaScript is not used -->
+  <link
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+    rel="stylesheet"
+  >
+
+  <link rel="stylesheet" href="../css/style.css">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet"
+  >
+</head>
+
+<body>
+  <div class="app-layout">
+
+    <!-- Sidebar navigation -->
+   <!-- SIDEBAR -->
+    <aside class="sidebar">
+      <a class="brand" href="../index.html">hcm<span>lite</span></a>
+
+      <nav aria-label="Main navigation">
+        <p class="nav-label">WORKSPACE</p>
+
+        <a class="nav-link" href="admin.html">▦ &nbsp; Overview</a>
+        <a class="nav-link" href="employees.html">♙ &nbsp; Employees</a>
+        <a class="nav-link active" href="leave management.html">▣ &nbsp; Leave Management</a>
+        <a class="nav-link" href="#">◷ &nbsp; Attendance</a>
+        <a class="nav-link" href="#">＄ &nbsp; Payroll</a>
+
+        <p class="nav-label">MANAGEMENT</p>
+
+        <a class="nav-link" href="settings.html">⚙ &nbsp; Company Settings</a>
+        <a class="nav-link" href="#">▤ &nbsp; Reports & Analytics</a>
+        <a class="nav-link" href="#">✧ &nbsp; AI Assistant</a>
+      </nav>
+    </aside>
+    <!-- Main content -->
+    <main class="main-content">
+
+      <header class="topbar">
+        <div>
+          <p class="muted mb-2">Workspace / Workforce</p>
+          <h1 class="page-title">Attendance Management</h1>
+          <p class="muted mb-0">
+            Monitor employee attendance and working hours.
+          </p>
+        </div>
+
+        <div class="profile">
+          <div class="avatar">HR</div>
+          <div>
+            <div class="fw-bold small">HR Administrator</div>
+            <div class="muted">Workspace account</div>
+          </div>
+        </div>
+      </header>
+
+      <!-- Overview cards -->
+      <section class="row g-3 mb-4" aria-label="Attendance overview">
+
+        <div class="col-6 col-xl-3">
+          <div class="stat-card">
+            <div class="stat-top">
+              <span class="stat-label">Total Employees</span>
+              <span class="stat-icon">♙</span>
+            </div>
+            <div class="stat-value">—</div>
+            <div class="stat-note">Requires employee records</div>
+          </div>
+        </div>
+
+        <div class="col-6 col-xl-3">
+          <div class="stat-card">
+            <div class="stat-top">
+              <span class="stat-label">Present Today</span>
+              <span class="stat-icon">✓</span>
+            </div>
+            <div class="stat-value">—</div>
+            <div class="stat-note">Requires attendance records</div>
+          </div>
+        </div>
+
+        <div class="col-6 col-xl-3">
+          <div class="stat-card">
+            <div class="stat-top">
+              <span class="stat-label">Late Arrivals</span>
+              <span class="stat-icon">◷</span>
+            </div>
+            <div class="stat-value">—</div>
+            <div class="stat-note">Requires check-in records</div>
+          </div>
+        </div>
+
+        <div class="col-6 col-xl-3">
+          <div class="stat-card">
+            <div class="stat-top">
+              <span class="stat-label">Absent Today</span>
+              <span class="stat-icon">!</span>
+            </div>
+            <div class="stat-value">—</div>
+            <div class="stat-note">Requires attendance records</div>
+          </div>
+        </div>
+
+      </section>
+
+      <!-- Check-in / check-out interface -->
+      <section class="panel">
+        <div class="d-flex flex-wrap justify-content-between align-items-center gap-3 mb-4">
+          <div>
+            <h2 class="section-title mb-2">Attendance Entry</h2>
+            <p class="muted mb-0">
+              Interface for recording employee attendance.
+            </p>
+          </div>
+
+          <span class="badge text-bg-light">Not connected</span>
+        </div>
+
+        <form>
+          <div class="row g-3">
+            <div class="col-12 col-md-6">
+              <label for="employeeId" class="form-label">Employee ID</label>
+              <input
+                type="text"
+                id="employeeId"
+                class="form-control"
+                placeholder="Enter employee ID"
+              >
+            </div>
+
+            <div class="col-12 col-md-6">
+              <label for="attendanceDate" class="form-label">Attendance Date</label>
+              <input
+                type="date"
+                id="attendanceDate"
+                class="form-control"
+              >
+            </div>
+
+            <div class="col-12 col-md-6">
+              <label for="checkIn" class="form-label">Check-in Time</label>
+              <input
+                type="time"
+                id="checkIn"
+                class="form-control"
+              >
+            </div>
+
+            <div class="col-12 col-md-6">
+              <label for="checkOut" class="form-label">Check-out Time</label>
+              <input
+                type="time"
+                id="checkOut"
+                class="form-control"
+              >
+            </div>
+
+            <div class="col-12 col-md-6">
+              <label for="attendanceStatus" class="form-label">Attendance Status</label>
+              <select id="attendanceStatus" class="form-select">
+                <option value="">Select status</option>
+                <option>Present</option>
+                <option>Late</option>
+                <option>Absent</option>
+                <option>On Leave</option>
+              </select>
+            </div>
+
+            <div class="col-12 col-md-6">
+              <label for="attendanceNotes" class="form-label">Notes (Optional)</label>
+              <input
+                type="text"
+                id="attendanceNotes"
+                class="form-control"
+                placeholder="Add a note"
+              >
+            </div>
+          </div>
+
+          <div class="d-flex flex-wrap gap-2 justify-content-end mt-4">
+            <button type="reset" class="btn-soft">Clear Form</button>
+            <button type="button" class="btn-teal">
+              Record Attendance
+            </button>
+          </div>
+        </form>
+      </section>
+
+      <!-- Attendance records -->
+      <section class="panel">
+        <div class="d-flex flex-wrap justify-content-between align-items-center gap-3 mb-4">
+          <div>
+            <h2 class="section-title mb-2">Daily Attendance Records</h2>
+            <p class="muted mb-0">
+              Review check-in, check-out and employee status.
+            </p>
+          </div>
+
+          <button type="button" class="btn-soft">Export Records</button>
+        </div>
+
+        <form class="row g-3 mb-4">
+          <div class="col-12 col-md-5">
+            <label for="searchAttendance" class="form-label">Search Employee</label>
+            <input
+              type="search"
+              id="searchAttendance"
+              class="form-control"
+              placeholder="Search employee name or ID"
+            >
+          </div>
+
+          <div class="col-6 col-md-3">
+            <label for="filterDate" class="form-label">Date</label>
+            <input
+              type="date"
+              id="filterDate"
+              class="form-control"
+            >
+          </div>
+
+          <div class="col-6 col-md-4">
+            <label for="filterStatus" class="form-label">Status</label>
+            <select id="filterStatus" class="form-select">
+              <option value="">All statuses</option>
+              <option>Present</option>
+              <option>Late</option>
+              <option>Absent</option>
+              <option>On Leave</option>
+            </select>
+          </div>
+        </form>
+
+        <div class="table-responsive">
+          <table class="table">
+            <thead>
+              <tr>
+                <th>Employee ID</th>
+                <th>Employee Name</th>
+                <th>Date</th>
+                <th>Check-in</th>
+                <th>Check-out</th>
+                <th>Working Hours</th>
+                <th>Status</th>
+              </tr>
+            </thead>
+
+            <tbody>
+              <!-- Actual records can be connected when permitted data storage is available. -->
+            </tbody>
+          </table>
+        </div>
+
+        <div class="empty-state">
+          <div class="empty-icon">◷</div>
+          <h3 class="fs-6 fw-bold text-dark">No attendance records yet</h3>
+          <p class="small mb-0">
+            Records will appear here after attendance data is connected.
+          </p>
+        </div>
+      </section>
+
+      <!-- Status legend -->
+      <section class="panel">
+        <h2 class="section-title mb-3">Attendance Status Guide</h2>
+
+        <div class="d-flex flex-wrap gap-4">
+          <div class="legend-item">
+            <span class="legend-dot"></span>
+            Present
+          </div>
+
+          <div class="legend-item">
+            <span class="legend-dot late"></span>
+            Late
+          </div>
+
+          <div class="legend-item">
+            <span class="legend-dot absent"></span>
+            Absent
+          </div>
+
+          <div class="legend-item">
+            <span class="legend-dot leave"></span>
+            On Leave
+          </div>
+        </div>
+      </section>
+
+      <div class="notice">
+        <strong>Development note:</strong> This page is a front-end interface.
+        Recording attendance, filtering records, exporting data and calculating
+        working hours require a permitted backend or another approved logic layer.
+        The summary cards remain blank until real attendance data is available.
+      </div>
+
+      <footer class="text-center muted mt-4">
+        HCM Lite · Attendance Management
+      </footer>
+
+    </main>
+  </div>
+</body>
+</html>

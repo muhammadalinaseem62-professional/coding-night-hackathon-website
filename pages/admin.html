@@ -1,0 +1,202 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admin Dashboard | HCM Lite</title>
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/style.css">
+  
+</head>
+
+<body>
+<div class="container-fluid dashboard-layout">
+  <div class="row">
+
+    <!-- SIDEBAR -->
+    <aside class="col-md-3 col-lg-2 sidebar">
+      <a href="../index.html" class="side-brand">hcm<span>lite</span></a>
+
+      <nav class="side-nav">
+        <p class="side-label">WORKSPACE</p>
+        <a href="admin.html" class="side-link active">▦ &nbsp; Dashboard</a>
+        <a href="employees.html" class="side-link">♙ &nbsp; Employees</a>
+        <a href="leave management.html" class="side-link">◷ &nbsp; Leave management</a>
+        <a href="#" class="side-link">▣ &nbsp; Attendance</a>
+        <a href="#" class="side-link">＄ &nbsp; Payroll</a>
+
+        <p class="side-label">MANAGEMENT</p>
+        <a href="settings.html" class="side-link">⚙ &nbsp; Company settings</a>
+        <a href="#" class="side-link">▤ &nbsp; Reports & analytics</a>
+        <a href="#" class="side-link">◈ &nbsp; AI assistant</a>
+      </nav>
+    </aside>
+
+    <!-- MAIN CONTENT -->
+    <main class="col-md-9 col-lg-10 main-area">
+
+      <header class="topbar">
+        <div>
+          <h1>Dashboard</h1>
+          <p>Here's an overview of your organization.</p>
+        </div>
+        <div class="d-flex align-items-center gap-3">
+          <div class="text-end d-none d-sm-block">
+            <strong style="font-size:12px">Administrator</strong>
+            <p class="mb-0 text-secondary" style="font-size:10px">Company Admin</p>
+          </div>
+          <div class="admin-avatar">AD</div>
+        </div>
+      </header>
+
+      <div class="dashboard-content">
+
+        <!-- WELCOME -->
+        <section class="welcome-banner">
+          <div>
+            <h2>Welcome to HCM Lite 👋</h2>
+            <p>Manage your people, attendance, leave, and payroll in one place.</p>
+          </div>
+          <span class="welcome-badge">● Admin workspace</span>
+        </section>
+
+        <!-- KPI CARDS -->
+        <div class="section-heading">
+          <div>
+            <h2>Organization overview</h2>
+            <p>Your key workforce indicators.</p>
+          </div>
+        </div>
+
+        <div class="row g-3">
+          <div class="col-6 col-xl-3">
+            <article class="metric-card">
+              <div class="metric-top">
+                <span class="metric-icon">♙</span>
+              </div>
+              <p class="metric-label">Total employees</p>
+              <p class="metric-value">—</p>
+              <p class="metric-note">Connect employee records to display data</p>
+            </article>
+          </div>
+
+          <div class="col-6 col-xl-3">
+            <article class="metric-card">
+              <div class="metric-top">
+                <span class="metric-icon">✓</span>
+              </div>
+              <p class="metric-label">Present today</p>
+              <p class="metric-value">—</p>
+              <p class="metric-note">Based on attendance records</p>
+            </article>
+          </div>
+
+          <div class="col-6 col-xl-3">
+            <article class="metric-card">
+              <div class="metric-top">
+                <span class="metric-icon">◷</span>
+                <span class="status-pill">Review</span>
+              </div>
+              <p class="metric-label">Pending leave requests</p>
+              <p class="metric-value">—</p>
+              <p class="metric-note">Requires HR review</p>
+            </article>
+          </div>
+
+          <div class="col-6 col-xl-3">
+            <article class="metric-card">
+              <div class="metric-top">
+                <span class="metric-icon">＄</span>
+              </div>
+              <p class="metric-label">Payroll status</p>
+              <p class="metric-value" style="font-size:20px">Not run</p>
+              <p class="metric-note">No payroll data loaded</p>
+            </article>
+          </div>
+        </div>
+
+        <!-- ACTIONS AND STATUS -->
+        <div class="section-heading">
+          <div>
+            <h2>Quick actions</h2>
+            <p>Shortcuts to common admin tasks.</p>
+          </div>
+        </div>
+
+        <div class="row g-3">
+          <div class="col-lg-7">
+            <section class="panel">
+              <h3>Get things done</h3>
+              <p class="panel-subtitle">Manage your organization's core activities.</p>
+
+              <a href="employees.html" class="action-link">
+                <span class="action-icon">＋</span>
+                <span class="flex-grow-1">Manage employees</span>
+                <span>→</span>
+              </a>
+
+              <a href="leaves.html" class="action-link">
+                <span class="action-icon">◷</span>
+                <span class="flex-grow-1">Review leave requests</span>
+                <span>→</span>
+              </a>
+
+              <a href="settings.html" class="action-link">
+                <span class="action-icon">⚙</span>
+                <span class="flex-grow-1">Configure organization</span>
+                <span>→</span>
+              </a>
+
+              <a href="#" class="action-link">
+                <span class="action-icon">▤</span>
+                <span class="flex-grow-1">View company reports</span>
+                <span>→</span>
+              </a>
+            </section>
+          </div>
+
+          <div class="col-lg-5">
+            <section class="panel">
+              <h3>Workspace status</h3>
+              <p class="panel-subtitle">Initial setup checklist.</p>
+
+              <div class="d-flex justify-content-between align-items-center mb-3">
+                <span style="font-size:12px">Company profile</span>
+                <span class="status-pill">Not configured</span>
+              </div>
+
+              <div class="d-flex justify-content-between align-items-center mb-3">
+                <span style="font-size:12px">Employee records</span>
+                <span class="status-pill">No data</span>
+              </div>
+
+              <div class="d-flex justify-content-between align-items-center mb-3">
+                <span style="font-size:12px">Leave policies</span>
+                <span class="status-pill">Not configured</span>
+              </div>
+
+              <div class="d-flex justify-content-between align-items-center mb-4">
+                <span style="font-size:12px">Payroll setup</span>
+                <span class="status-pill">Not configured</span>
+              </div>
+
+              <div class="notice">
+                This dashboard starts without sample employee data.
+                Configure your organization before using workforce reports.
+              </div>
+            </section>
+          </div>
+        </div>
+
+        <p class="text-secondary mt-4 mb-0" style="font-size:10px">
+          HCM Lite · Admin dashboard prototype · Data indicators require backend integration.
+        </p>
+      </div>
+    </main>
+  </div>
+</div>
+</body>
+</html>

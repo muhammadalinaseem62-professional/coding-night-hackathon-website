@@ -1,0 +1,275 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Employees | HCM Lite</title>
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+
+<body>
+<div class="container-fluid">
+  <div class="row">
+
+    <!-- SIDEBAR -->
+    <!-- SIDEBAR -->
+    <aside class="col-md-3 col-lg-2 sidebar">
+      <a href="../index.html" class="side-brand">hcm<span>lite</span></a>
+
+      <nav class="side-nav">
+        <p class="side-label">WORKSPACE</p>
+        <a href="admin.html" class="side-link active">▦ &nbsp; Dashboard</a>
+        <a href="employees.html" class="side-link">♙ &nbsp; Employees</a>
+        <a href="leave management.html" class="side-link">◷ &nbsp; Leave management</a>
+        <a href="#" class="side-link">▣ &nbsp; Attendance</a>
+        <a href="#" class="side-link">＄ &nbsp; Payroll</a>
+
+        <p class="side-label">MANAGEMENT</p>
+        <a href="settings.html" class="side-link">⚙ &nbsp; Company settings</a>
+        <a href="#" class="side-link">▤ &nbsp; Reports & analytics</a>
+        <a href="#" class="side-link">◈ &nbsp; AI assistant</a>
+      </nav>
+    </aside>
+
+    <!-- MAIN -->
+    <main class="col-md-9 col-lg-10 main-area">
+
+      <header class="topbar">
+        <div>
+          <h1>Employees</h1>
+          <p>Manage your people and employee records.</p>
+        </div>
+        <div class="d-flex align-items-center gap-3">
+          <div class="text-end d-none d-sm-block">
+            <strong style="font-size:12px">Administrator</strong>
+            <p class="mb-0 text-secondary" style="font-size:10px">Company Admin</p>
+          </div>
+          <div class="avatar">AD</div>
+        </div>
+      </header>
+
+      <div class="page-content">
+
+        <!-- PAGE TITLE -->
+        <div class="page-heading">
+          <div>
+            <h2>Employee directory</h2>
+            <p>View and manage your organization's employee information.</p>
+          </div>
+          <a href="#add-employee" class="btn primary-action">＋ Add employee</a>
+        </div>
+
+        <!-- SUMMARY CARDS -->
+        <div class="row g-3">
+          <div class="col-6 col-xl-3">
+            <div class="stat-card">
+              <div class="stat-label">Total employees</div>
+              <div class="stat-number">—</div>
+            </div>
+          </div>
+
+          <div class="col-6 col-xl-3">
+            <div class="stat-card">
+              <div class="stat-label">Active employees</div>
+              <div class="stat-number">—</div>
+            </div>
+          </div>
+
+          <div class="col-6 col-xl-3">
+            <div class="stat-card">
+              <div class="stat-label">Departments</div>
+              <div class="stat-number">—</div>
+            </div>
+          </div>
+
+          <div class="col-6 col-xl-3">
+            <div class="stat-card">
+              <div class="stat-label">On leave today</div>
+              <div class="stat-number">—</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- EMPLOYEE TABLE -->
+        <section class="panel">
+          <div class="panel-header">
+            <div>
+              <h3>All employees</h3>
+              <p>Employee records will appear here once connected.</p>
+            </div>
+            <a href="#add-employee" class="btn btn-outline-primary btn-sm">
+              Add new
+            </a>
+          </div>
+
+          <div class="p-3">
+            <div class="row g-2">
+              <div class="col-lg-6">
+                <label for="search" class="visually-hidden">Search employees</label>
+                <input
+                  id="search"
+                  type="search"
+                  class="form-control filter-control"
+                  placeholder="Search name, email or employee ID">
+              </div>
+
+              <div class="col-sm-6 col-lg-3">
+                <label for="department" class="visually-hidden">Department</label>
+                <select id="department" class="form-select filter-control">
+                  <option selected>All departments</option>
+                  <option>Human Resources</option>
+                  <option>Engineering</option>
+                  <option>Finance</option>
+                  <option>Marketing</option>
+                </select>
+              </div>
+
+              <div class="col-sm-6 col-lg-3">
+                <label for="status" class="visually-hidden">Status</label>
+                <select id="status" class="form-select filter-control">
+                  <option selected>All statuses</option>
+                  <option>Active</option>
+                  <option>On leave</option>
+                  <option>Inactive</option>
+                </select>
+              </div>
+            </div>
+          </div>
+
+          <div class="table-responsive">
+            <table class="table">
+              <thead>
+                <tr>
+                  <th>EMPLOYEE</th>
+                  <th>EMPLOYEE ID</th>
+                  <th>DEPARTMENT</th>
+                  <th>DESIGNATION</th>
+                  <th>STATUS</th>
+                  <th>ACTION</th>
+                </tr>
+              </thead>
+              <tbody>
+                <!-- Intentionally empty: no fake employee records -->
+              </tbody>
+            </table>
+          </div>
+
+          <div class="empty-state">
+            <div class="empty-icon">♙</div>
+            <strong class="d-block mb-2" style="color:#19283d">
+              No employee records yet
+            </strong>
+            Your employee directory will appear here when real records are added.
+            <div class="mt-3">
+              <a href="#add-employee" class="btn btn-outline-primary btn-sm">
+                Add your first employee
+              </a>
+            </div>
+          </div>
+        </section>
+
+        <!-- ADD EMPLOYEE FORM -->
+        <section class="form-panel mt-4" id="add-employee">
+          <h3>Add an employee</h3>
+          <p>Enter the employee's basic information below.</p>
+
+          <form action="#" method="post">
+            <div class="row g-3">
+
+              <div class="col-md-6">
+                <label for="full-name" class="form-label">Full name</label>
+                <input id="full-name" name="full-name" type="text"
+                  class="form-control custom-field"
+                  placeholder="Enter full name" required>
+              </div>
+
+              <div class="col-md-6">
+                <label for="employee-email" class="form-label">Work email</label>
+                <input id="employee-email" name="employee-email" type="email"
+                  class="form-control custom-field"
+                  placeholder="name@company.com" required>
+              </div>
+
+              <div class="col-md-6">
+                <label for="employee-id" class="form-label">Employee ID</label>
+                <input id="employee-id" name="employee-id" type="text"
+                  class="form-control custom-field"
+                  placeholder="e.g. EMP-001" required>
+              </div>
+
+              <div class="col-md-6">
+                <label for="phone" class="form-label">Phone number</label>
+                <input id="phone" name="phone" type="tel"
+                  class="form-control custom-field"
+                  placeholder="Enter phone number">
+              </div>
+
+              <div class="col-md-6">
+                <label for="department-form" class="form-label">Department</label>
+                <select id="department-form" name="department"
+                  class="form-select custom-field" required>
+                  <option value="" selected disabled>Select department</option>
+                  <option>Human Resources</option>
+                  <option>Engineering</option>
+                  <option>Finance</option>
+                  <option>Marketing</option>
+                  <option>Operations</option>
+                </select>
+              </div>
+
+              <div class="col-md-6">
+                <label for="designation" class="form-label">Designation</label>
+                <input id="designation" name="designation" type="text"
+                  class="form-control custom-field"
+                  placeholder="e.g. HR Executive" required>
+              </div>
+
+              <div class="col-md-6">
+                <label for="joining-date" class="form-label">Joining date</label>
+                <input id="joining-date" name="joining-date" type="date"
+                  class="form-control custom-field" required>
+              </div>
+
+              <div class="col-md-6">
+                <label for="employee-status" class="form-label">Employment status</label>
+                <select id="employee-status" name="employee-status"
+                  class="form-select custom-field" required>
+                  <option value="" selected disabled>Select status</option>
+                  <option>Active</option>
+                  <option>On leave</option>
+                  <option>Inactive</option>
+                </select>
+              </div>
+
+              <div class="col-12">
+                <div class="note">
+                  Prototype notice: this form does not create an employee record yet.
+                  Saving records and generating employee logins require approved backend functionality.
+                </div>
+              </div>
+
+              <div class="col-12 d-flex flex-wrap gap-2">
+                <button type="button" class="btn primary-action">
+                  Save employee
+                </button>
+                <a href="admin.html" class="btn btn-light border btn-sm px-3 py-2">
+                  Back to dashboard
+                </a>
+              </div>
+            </div>
+          </form>
+        </section>
+
+        <p class="text-secondary mt-4 mb-0" style="font-size:10px">
+          HCM Lite · Employee management prototype
+        </p>
+      </div>
+    </main>
+  </div>
+</div>
+</body>
+</html>

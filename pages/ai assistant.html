@@ -1,0 +1,490 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>AI Assistant | HCM Lite</title>
+
+  <!-- Bootstrap CSS -->
+  <link
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+    rel="stylesheet"
+  >
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet"
+  >
+
+  <!-- Shared CSS -->
+  <link rel="stylesheet" href="../css/style.css">
+
+</head>
+
+<body>
+
+  <div class="container-fluid">
+    <div class="row">
+
+      <!-- EXACT NAVBAR STRUCTURE FROM employees.html -->
+      <aside class="col-md-3 col-lg-2 sidebar">
+
+        <a href="../index.html" class="side-brand">
+          hcm<span>lite</span>
+        </a>
+
+        <nav class="side-nav">
+
+          <p class="side-label">WORKSPACE</p>
+
+          <a href="admin.html" class="side-link">
+            ▦ &nbsp; Dashboard
+          </a>
+
+          <a href="employees.html" class="side-link">
+            ♙ &nbsp; Employees
+          </a>
+
+          <a href="leaves.html" class="side-link">
+            ◷ &nbsp; Leave management
+          </a>
+
+          <a href="attendance.html" class="side-link">
+            ▣ &nbsp; Attendance
+          </a>
+
+          <a href="payroll.html" class="side-link">
+            ＄ &nbsp; Payroll
+          </a>
+
+          <p class="side-label">MANAGEMENT</p>
+
+          <a href="settings.html" class="side-link">
+            ⚙ &nbsp; Company settings
+          </a>
+
+          <a href="reports.html" class="side-link">
+            ▤ &nbsp; Reports &amp; analytics
+          </a>
+
+          <a href="ai-assistant.html" class="side-link active">
+            ◈ &nbsp; AI assistant
+          </a>
+
+        </nav>
+
+      </aside>
+
+      <!-- MAIN CONTENT -->
+      <main class="col-md-9 col-lg-10 main-content p-3 p-lg-4">
+
+        <!-- TOPBAR -->
+        <header class="topbar d-flex flex-wrap
+                       justify-content-between align-items-center
+                       gap-3 mb-4">
+
+          <div>
+            <p class="muted small mb-1">
+              Workspace / AI Assistant
+            </p>
+            <h1 class="h4 fw-bold mb-0">
+              AI HR Assistant
+            </h1>
+          </div>
+
+          <div class="d-flex align-items-center gap-3">
+            <div class="text-end">
+              <div class="fw-semibold small">Workspace Admin</div>
+              <div class="muted" style="font-size:12px;">
+                HR Administrator
+              </div>
+            </div>
+
+            <div class="rounded-circle d-flex align-items-center
+                        justify-content-center fw-bold"
+                 style="width:42px;height:42px;
+                        background:#dff7f0;color:#176b5d;">
+              WA
+            </div>
+          </div>
+
+        </header>
+
+        <!-- HERO SECTION -->
+        <section class="assistant-hero mb-4">
+
+          <div class="row align-items-center g-4">
+
+            <div class="col-lg-8">
+
+              <span class="status-pill mb-3">
+                <span class="status-dot"></span>
+                HR PRODUCTIVITY WORKSPACE
+              </span>
+
+              <h2 class="fw-bold mb-3"
+                  style="font-size:clamp(25px,3vw,35px);">
+                Meet your HR<br>
+                <span style="color:#65d8c0;">
+                  AI Assistant.
+                </span>
+              </h2>
+
+              <p class="mb-0"
+                 style="color:#d2deeb;line-height:1.9;
+                        font-size:14px;max-width:600px;">
+                Get help drafting HR communications, understanding
+                workplace policies, organizing tasks, and preparing
+                reports with a thoughtfully designed AI assistant
+                workspace.
+              </p>
+
+            </div>
+
+            <div class="col-lg-4 d-flex justify-content-lg-end">
+
+              <div class="text-center p-4 rounded-4"
+                   style="background:rgba(255,255,255,0.08);
+                          border:1px solid rgba(255,255,255,0.12);
+                          min-width:180px;">
+
+                <div class="ai-symbol mx-auto mb-3">✧</div>
+
+                <h6 class="fw-bold mb-1">Smart HR Support</h6>
+
+                <p class="small mb-0" style="color:#c5d4e4;">
+                  Designed for HR teams
+                </p>
+
+              </div>
+
+            </div>
+
+          </div>
+
+        </section>
+
+        <!-- SUGGESTED PROMPTS -->
+        <section class="mb-4">
+
+          <div class="d-flex flex-wrap justify-content-between
+                      align-items-end gap-2 mb-3">
+
+            <div>
+              <h2 class="section-heading">
+                Explore what you can ask
+              </h2>
+
+              <p class="section-description mb-0">
+                Choose a starting point for your HR task.
+              </p>
+            </div>
+
+            <span class="small-label">Suggested prompts</span>
+
+          </div>
+
+          <div class="row g-3">
+
+            <div class="col-xl-3 col-sm-6">
+              <article class="assistant-card">
+                <div class="prompt-icon">📊</div>
+                <h3 class="prompt-title">Attendance Insights</h3>
+                <p class="prompt-description">
+                  Prepare a summary structure for attendance
+                  patterns and workforce punctuality.
+                </p>
+              </article>
+            </div>
+
+            <div class="col-xl-3 col-sm-6">
+              <article class="assistant-card">
+                <div class="prompt-icon">📋</div>
+                <h3 class="prompt-title">Leave Policy Help</h3>
+                <p class="prompt-description">
+                  Explain leave policy wording and organize
+                  frequently asked HR questions.
+                </p>
+              </article>
+            </div>
+
+            <div class="col-xl-3 col-sm-6">
+              <article class="assistant-card">
+                <div class="prompt-icon">💼</div>
+                <h3 class="prompt-title">Payroll Checklist</h3>
+                <p class="prompt-description">
+                  Create a checklist of items to review before
+                  a payroll period is finalized.
+                </p>
+              </article>
+            </div>
+
+            <div class="col-xl-3 col-sm-6">
+              <article class="assistant-card">
+                <div class="prompt-icon">✉️</div>
+                <h3 class="prompt-title">HR Announcement</h3>
+                <p class="prompt-description">
+                  Draft a professional staff announcement,
+                  memo, or internal HR communication.
+                </p>
+              </article>
+            </div>
+
+          </div>
+
+        </section>
+
+        <!-- CHAT AND CAPABILITIES -->
+        <div class="row g-4">
+
+          <div class="col-xl-8">
+
+            <section class="chat-panel">
+
+              <div class="chat-header">
+
+                <div class="ai-symbol"
+                     style="width:45px;height:45px;
+                            border-radius:14px;font-size:22px;">
+                  ✧
+                </div>
+
+                <div>
+                  <h2 class="fw-bold mb-1"
+                      style="font-size:15px;">
+                    Your HR conversation
+                  </h2>
+
+                  <p class="section-description mb-0">
+                    Start with a question or a workplace task.
+                  </p>
+                </div>
+
+                <span class="ms-auto badge rounded-pill text-bg-light">
+                  Prototype
+                </span>
+
+              </div>
+
+              <div class="chat-body">
+
+                <div class="assistant-message">
+
+                  <div class="mini-ai">AI</div>
+
+                  <div>
+
+                    <div class="small fw-bold mb-2">
+                      HCM Lite Assistant
+                    </div>
+
+                    <div class="message-bubble">
+                      Welcome to your HR assistant workspace!
+                      <br><br>
+
+                      I can be designed to help with HR document
+                      drafts, policy explanations, checklists,
+                      and report outlines. What would you like
+                      help preparing today?
+
+                      <br><br>
+
+                      <span class="small">
+                        This is a static demonstration. No AI
+                        response is generated on this page yet.
+                      </span>
+                    </div>
+
+                  </div>
+
+                </div>
+
+              </div>
+
+              <div class="chat-composer">
+
+                <label for="userPrompt"
+                       class="form-label fw-semibold small">
+                  Your message
+                </label>
+
+                <textarea
+                  id="userPrompt"
+                  class="form-control mb-3"
+                  placeholder="Example: Help me draft a professional HR announcement..."
+                ></textarea>
+
+                <div class="d-flex flex-wrap
+                            justify-content-between
+                            align-items-center gap-3">
+
+                  <span class="text-secondary"
+                        style="font-size:11px;">
+                    Prototype only · No message is submitted
+                  </span>
+
+                  <button type="button" class="btn btn-ai">
+                    ✧ Generate Response
+                  </button>
+
+                </div>
+
+              </div>
+
+            </section>
+
+            <!-- PRIVACY NOTICE -->
+            <section class="privacy-card mt-4">
+
+              <div class="d-flex gap-3">
+
+                <div style="font-size:23px;">🔒</div>
+
+                <div>
+                  <h3>Privacy &amp; responsible AI</h3>
+
+                  <p>
+                    Do not enter employee passwords, private
+                    contact details, bank information, or
+                    confidential personnel records into an
+                    unapproved AI service. HR decisions should
+                    be reviewed by an authorized human.
+                  </p>
+                </div>
+
+              </div>
+
+            </section>
+
+          </div>
+
+          <!-- RIGHT PANEL -->
+          <div class="col-xl-4">
+
+            <section class="panel p-4 mb-4">
+
+              <h2 class="section-heading mb-1">
+                Assistant capabilities
+              </h2>
+
+              <p class="section-description mb-4">
+                Examples of intended functionality.
+              </p>
+
+              <div class="capability-item">
+                <div class="capability-check">✓</div>
+                <div>
+                  <h4>HR document drafting</h4>
+                  <p>
+                    Prepare first drafts of notices, memos,
+                    and workplace announcements.
+                  </p>
+                </div>
+              </div>
+
+              <div class="capability-item">
+                <div class="capability-check">✓</div>
+                <div>
+                  <h4>Policy explanations</h4>
+                  <p>
+                    Make HR policies easier to understand and
+                    organize common questions.
+                  </p>
+                </div>
+              </div>
+
+              <div class="capability-item">
+                <div class="capability-check">✓</div>
+                <div>
+                  <h4>Checklist preparation</h4>
+                  <p>
+                    Structure attendance, onboarding, and
+                    payroll review checklists.
+                  </p>
+                </div>
+              </div>
+
+              <div class="capability-item mb-0">
+                <div class="capability-check">✓</div>
+                <div>
+                  <h4>Report outlines</h4>
+                  <p>
+                    Suggest report sections and ways to present
+                    verified HR information.
+                  </p>
+                </div>
+              </div>
+
+            </section>
+
+            <!-- QUICK GUIDELINES -->
+            <section class="panel p-4">
+
+              <h2 class="section-heading mb-1">
+                Quick guidelines
+              </h2>
+
+              <p class="section-description mb-4">
+                Get better results from an AI assistant.
+              </p>
+
+              <div class="mb-3">
+                <div class="fw-bold small mb-1">
+                  01. Be specific
+                </div>
+                <p class="section-description mb-0">
+                  Explain the task and the intended audience.
+                </p>
+              </div>
+
+              <hr style="border-color:#edf0f5;">
+
+              <div class="mb-3">
+                <div class="fw-bold small mb-1">
+                  02. Add context
+                </div>
+                <p class="section-description mb-0">
+                  Include relevant, non-confidential policy details.
+                </p>
+              </div>
+
+              <hr style="border-color:#edf0f5;">
+
+              <div>
+                <div class="fw-bold small mb-1">
+                  03. Review the result
+                </div>
+                <p class="section-description mb-0">
+                  Check accuracy, fairness, and policy compliance
+                  before using generated content.
+                </p>
+              </div>
+
+            </section>
+
+          </div>
+
+        </div>
+
+        <!-- FOOTER -->
+        <footer class="text-center py-4 mt-3">
+          <p class="text-secondary small mb-1">
+            HCM Lite · Human Capital Management
+          </p>
+          <p class="text-secondary" style="font-size:11px;">
+            AI assistant interface demonstration
+          </p>
+        </footer>
+
+      </main>
+
+    </div>
+  </div>
+
+</body>
+</html>

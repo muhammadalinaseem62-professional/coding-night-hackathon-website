@@ -1,0 +1,352 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Payroll Management | HCM Lite</title>
+
+  <!-- Bootstrap CSS only; no JavaScript -->
+  <link
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+    rel="stylesheet"
+  >
+
+  <link rel="stylesheet" href="../css/style.css">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet"
+  >
+
+</head>
+
+<body>
+  <div class="app-layout">
+
+    <!-- Sidebar -->
+    <!-- SIDEBAR -->
+    <aside class="col-md-3 col-lg-2 sidebar">
+      <a href="../index.html" class="side-brand">hcm<span>lite</span></a>
+
+      <nav class="side-nav">
+        <p class="side-label">WORKSPACE</p>
+        <a href="admin.html" class="side-link active">▦ &nbsp; Dashboard</a>
+        <a href="employees.html" class="side-link">♙ &nbsp; Employees</a>
+        <a href="leave management.html" class="side-link">◷ &nbsp; Leave management</a>
+        <a href="#" class="side-link">▣ &nbsp; Attendance</a>
+        <a href="#" class="side-link">＄ &nbsp; Payroll</a>
+
+        <p class="side-label">MANAGEMENT</p>
+        <a href="settings.html" class="side-link">⚙ &nbsp; Company settings</a>
+        <a href="#" class="side-link">▤ &nbsp; Reports & analytics</a>
+        <a href="#" class="side-link">◈ &nbsp; AI assistant</a>
+      </nav>
+    </aside>
+    <!-- Main content -->
+    <main class="main-content">
+
+      <header class="topbar">
+        <div>
+          <p class="muted mb-2">Workspace / Finance</p>
+          <h1 class="page-title">Payroll Management</h1>
+          <p class="muted mb-0">
+            Manage employee salary information and payroll records.
+          </p>
+        </div>
+
+        <div class="profile">
+          <div class="avatar">HR</div>
+          <div>
+            <div class="fw-bold small">HR Administrator</div>
+            <div class="muted">Workspace account</div>
+          </div>
+        </div>
+      </header>
+
+      <!-- Payroll overview -->
+      <section class="row g-3 mb-4" aria-label="Payroll overview">
+
+        <div class="col-6 col-xl-3">
+          <div class="stat-card">
+            <div class="stat-top">
+              <span class="stat-label">Total Payroll</span>
+              <span class="stat-icon">＄</span>
+            </div>
+            <div class="stat-value">—</div>
+            <div class="stat-note">Requires payroll records</div>
+          </div>
+        </div>
+
+        <div class="col-6 col-xl-3">
+          <div class="stat-card">
+            <div class="stat-top">
+              <span class="stat-label">Employees</span>
+              <span class="stat-icon">♙</span>
+            </div>
+            <div class="stat-value">—</div>
+            <div class="stat-note">Requires employee records</div>
+          </div>
+        </div>
+
+        <div class="col-6 col-xl-3">
+          <div class="stat-card">
+            <div class="stat-top">
+              <span class="stat-label">Paid Salaries</span>
+              <span class="stat-icon">✓</span>
+            </div>
+            <div class="stat-value">—</div>
+            <div class="stat-note">Requires payment records</div>
+          </div>
+        </div>
+
+        <div class="col-6 col-xl-3">
+          <div class="stat-card">
+            <div class="stat-top">
+              <span class="stat-label">Pending Payments</span>
+              <span class="stat-icon">◷</span>
+            </div>
+            <div class="stat-value">—</div>
+            <div class="stat-note">Requires payment records</div>
+          </div>
+        </div>
+
+      </section>
+
+      <!-- Payroll period -->
+      <section class="panel">
+        <div class="mb-4">
+          <h2 class="section-title mb-2">Payroll Period</h2>
+          <p class="muted mb-0">
+            Choose the payroll month and reporting currency.
+          </p>
+        </div>
+
+        <form>
+          <div class="row g-3 align-items-end">
+            <div class="col-12 col-md-5">
+              <label for="payrollMonth" class="form-label">Payroll Month</label>
+              <input
+                type="month"
+                id="payrollMonth"
+                class="form-control"
+              >
+            </div>
+
+            <div class="col-12 col-md-4">
+              <label for="payrollCurrency" class="form-label">Currency</label>
+              <select id="payrollCurrency" class="form-select">
+                <option>PKR — Pakistani Rupee</option>
+                <option>USD — US Dollar</option>
+                <option>AED — UAE Dirham</option>
+              </select>
+            </div>
+
+            <div class="col-12 col-md-3">
+              <button type="button" class="btn-teal w-100">
+                View Payroll
+              </button>
+            </div>
+          </div>
+        </form>
+      </section>
+
+      <!-- Salary configuration -->
+      <section class="panel">
+        <div class="mb-4">
+          <h2 class="section-title mb-2">Salary Configuration</h2>
+          <p class="muted mb-0">
+            Enter the salary components for an employee.
+          </p>
+        </div>
+
+        <form>
+          <div class="row g-3">
+
+            <div class="col-12 col-md-6">
+              <label for="employeeId" class="form-label">Employee ID</label>
+              <input
+                type="text"
+                id="employeeId"
+                class="form-control"
+                placeholder="Enter employee ID"
+              >
+            </div>
+
+            <div class="col-12 col-md-6">
+              <label for="employeeName" class="form-label">Employee Name</label>
+              <input
+                type="text"
+                id="employeeName"
+                class="form-control"
+                placeholder="Enter employee name"
+              >
+            </div>
+
+            <div class="col-12 col-md-6">
+              <label for="basicSalary" class="form-label">Basic Salary</label>
+              <input
+                type="number"
+                id="basicSalary"
+                class="form-control"
+                min="0"
+                step="0.01"
+                placeholder="Enter basic salary"
+              >
+            </div>
+
+            <div class="col-12 col-md-6">
+              <label for="allowances" class="form-label">Allowances</label>
+              <input
+                type="number"
+                id="allowances"
+                class="form-control"
+                min="0"
+                step="0.01"
+                placeholder="Enter total allowances"
+              >
+            </div>
+
+            <div class="col-12 col-md-6">
+              <label for="deductions" class="form-label">Deductions</label>
+              <input
+                type="number"
+                id="deductions"
+                class="form-control"
+                min="0"
+                step="0.01"
+                placeholder="Enter authorized deductions"
+              >
+            </div>
+
+            <div class="col-12 col-md-6">
+              <label for="paymentStatus" class="form-label">Payment Status</label>
+              <select id="paymentStatus" class="form-select">
+                <option value="">Select payment status</option>
+                <option>Pending</option>
+                <option>Paid</option>
+                <option>On Hold</option>
+              </select>
+            </div>
+
+            <div class="col-12">
+              <div class="notice">
+                Net salary is generally calculated as basic salary plus
+                allowances and other earnings, minus authorized deductions.
+                This page does not calculate or verify the amount automatically.
+              </div>
+            </div>
+          </div>
+
+          <div class="d-flex flex-wrap justify-content-end gap-2 mt-4">
+            <button type="reset" class="btn-soft">Clear Form</button>
+            <button type="button" class="btn-teal">
+              Save Salary Details
+            </button>
+          </div>
+        </form>
+      </section>
+
+      <!-- Payroll table -->
+      <section class="panel">
+        <div class="d-flex flex-wrap justify-content-between align-items-center gap-3 mb-4">
+          <div>
+            <h2 class="section-title mb-2">Employee Payroll Records</h2>
+            <p class="muted mb-0">
+              Review salary amounts and payment status.
+            </p>
+          </div>
+
+          <button type="button" class="btn-soft">
+            Export Payroll
+          </button>
+        </div>
+
+        <form class="row g-3 mb-4">
+          <div class="col-12 col-md-5">
+            <label for="searchPayroll" class="form-label">Search Employee</label>
+            <input
+              type="search"
+              id="searchPayroll"
+              class="form-control"
+              placeholder="Search by employee name or ID"
+            >
+          </div>
+
+          <div class="col-12 col-md-4">
+            <label for="payrollFilterMonth" class="form-label">Payroll Month</label>
+            <input
+              type="month"
+              id="payrollFilterMonth"
+              class="form-control"
+            >
+          </div>
+
+          <div class="col-12 col-md-3">
+            <label for="payrollFilterStatus" class="form-label">Payment Status</label>
+            <select id="payrollFilterStatus" class="form-select">
+              <option value="">All statuses</option>
+              <option>Pending</option>
+              <option>Paid</option>
+              <option>On Hold</option>
+            </select>
+          </div>
+        </form>
+
+        <div class="table-responsive">
+          <table class="table">
+            <thead>
+              <tr>
+                <th>Employee ID</th>
+                <th>Employee Name</th>
+                <th>Basic Salary</th>
+                <th>Allowances</th>
+                <th>Deductions</th>
+                <th>Net Salary</th>
+                <th>Status</th>
+                <th>Payslip</th>
+              </tr>
+            </thead>
+
+            <tbody>
+              <!-- Real payroll records will be connected when data storage is available. -->
+            </tbody>
+          </table>
+        </div>
+
+        <div class="empty-state">
+          <div class="empty-icon">＄</div>
+          <h3 class="fs-6 fw-bold text-dark">No payroll records yet</h3>
+          <p class="small mb-0">
+            Employee payroll records will appear here after data is connected.
+          </p>
+        </div>
+      </section>
+
+      <!-- Payroll safety -->
+      <section class="panel">
+        <h2 class="section-title mb-3">Payroll Processing Notes</h2>
+
+        <div class="security-note">
+          <strong>Important:</strong> Salary and payment information is
+          confidential. Restrict access to authorized personnel. Before making
+          real payments, verify calculations, applicable deductions, employee
+          details and approval requirements.
+        </div>
+
+        <p class="muted mt-3 mb-0">
+          Payslip generation, payroll calculations, payment processing and
+          exporting records require an approved logic layer and secure data storage.
+        </p>
+      </section>
+
+      <footer class="text-center muted mt-4">
+        HCM Lite · Payroll Management
+      </footer>
+
+    </main>
+  </div>
+</body>
+</html>

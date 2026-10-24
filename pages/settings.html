@@ -1,0 +1,351 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Settings | HCM Lite</title>
+
+  <!-- Bootstrap CSS only -->
+  <link
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+    rel="stylesheet"
+  >
+
+  <link rel="stylesheet" href="../css/style.css">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet"
+  >
+
+
+</head>
+
+<body>
+  <div class="app-layout">
+
+    <!-- Sidebar -->
+   <!-- SIDEBAR -->
+     <aside class="sidebar">
+      <a class="brand" href="../index.html">hcm<span>lite</span></a>
+
+      <nav aria-label="Main navigation">
+        <p class="nav-label">WORKSPACE</p>
+
+        <a class="nav-link" href="admin.html">▦ &nbsp; Overview</a>
+        <a class="nav-link" href="employees.html">♙ &nbsp; Employees</a>
+        <a class="nav-link active" href="leave management.html">▣ &nbsp; Leave Management</a>
+        <a class="nav-link" href="#">◷ &nbsp; Attendance</a>
+        <a class="nav-link" href="#">＄ &nbsp; Payroll</a>
+
+        <p class="nav-label">MANAGEMENT</p>
+
+        <a class="nav-link" href="settings.html">⚙ &nbsp; Company Settings</a>
+        <a class="nav-link" href="#">▤ &nbsp; Reports & Analytics</a>
+        <a class="nav-link" href="#">✧ &nbsp; AI Assistant</a>
+      </nav>
+    </aside>
+
+    <!-- Main -->
+    <main class="main-content">
+
+      <header class="topbar">
+        <div>
+          <p class="muted mb-2">Workspace / Configuration</p>
+          <h1 class="page-title">Settings</h1>
+          <p class="muted mb-0">
+            Manage your company profile and workspace preferences.
+          </p>
+        </div>
+
+        <div class="profile">
+          <div class="avatar">HR</div>
+          <div>
+            <div class="fw-bold small">HR Administrator</div>
+            <div class="muted">Workspace account</div>
+          </div>
+        </div>
+      </header>
+
+      <!-- Settings navigation -->
+      <nav class="settings-nav" aria-label="Settings sections">
+        <a class="settings-tab active" href="#company">Company Profile</a>
+        <a class="settings-tab" href="#preferences">Preferences</a>
+        <a class="settings-tab" href="#leave-policy">Leave Policies</a>
+        <a class="settings-tab" href="#security">Security</a>
+      </nav>
+
+      <!-- Company Profile -->
+      <section class="panel" id="company">
+        <div class="section-heading">
+          <div class="section-icon">▣</div>
+          <div>
+            <h2 class="section-title">Company Profile</h2>
+            <p class="muted mb-0">
+              Add the basic information for your organization.
+            </p>
+          </div>
+        </div>
+
+        <form>
+          <div class="row g-3">
+            <div class="col-12 col-md-6">
+              <label for="companyName" class="form-label">Company Name</label>
+              <input
+                id="companyName"
+                class="form-control"
+                type="text"
+                placeholder="Enter company name"
+              >
+            </div>
+
+            <div class="col-12 col-md-6">
+              <label for="companyEmail" class="form-label">Official Email</label>
+              <input
+                id="companyEmail"
+                class="form-control"
+                type="email"
+                placeholder="company@example.com"
+              >
+            </div>
+
+            <div class="col-12 col-md-6">
+              <label for="companyPhone" class="form-label">Phone Number</label>
+              <input
+                id="companyPhone"
+                class="form-control"
+                type="tel"
+                placeholder="Enter business phone"
+              >
+            </div>
+
+            <div class="col-12 col-md-6">
+              <label for="industry" class="form-label">Industry</label>
+              <select id="industry" class="form-select">
+                <option value="">Select industry</option>
+                <option>Information Technology</option>
+                <option>Education</option>
+                <option>Healthcare</option>
+                <option>Retail</option>
+                <option>Manufacturing</option>
+                <option>Other</option>
+              </select>
+            </div>
+
+            <div class="col-12">
+              <label for="companyAddress" class="form-label">Office Address</label>
+              <textarea
+                id="companyAddress"
+                class="form-control"
+                placeholder="Enter your office address"
+              ></textarea>
+            </div>
+          </div>
+
+          <div class="d-flex flex-wrap justify-content-end gap-2 mt-4">
+            <button type="reset" class="btn-soft">Reset Form</button>
+            <button type="button" class="btn-teal">Save Company Profile</button>
+          </div>
+        </form>
+      </section>
+
+      <!-- Workspace Preferences -->
+      <section class="panel" id="preferences">
+        <div class="section-heading">
+          <div class="section-icon">⚙</div>
+          <div>
+            <h2 class="section-title">Workspace Preferences</h2>
+            <p class="muted mb-0">
+              Choose how dates, time and language are displayed.
+            </p>
+          </div>
+        </div>
+
+        <form>
+          <div class="row g-3">
+            <div class="col-12 col-md-6">
+              <label for="timezone" class="form-label">Timezone</label>
+              <select id="timezone" class="form-select">
+                <option value="">Select timezone</option>
+                <option>Asia/Karachi (PKT)</option>
+                <option>Asia/Dubai</option>
+                <option>Europe/London</option>
+                <option>America/New_York</option>
+              </select>
+            </div>
+
+            <div class="col-12 col-md-6">
+              <label for="dateFormat" class="form-label">Date Format</label>
+              <select id="dateFormat" class="form-select">
+                <option>DD/MM/YYYY</option>
+                <option>MM/DD/YYYY</option>
+                <option>YYYY-MM-DD</option>
+              </select>
+            </div>
+
+            <div class="col-12 col-md-6">
+              <label for="language" class="form-label">Display Language</label>
+              <select id="language" class="form-select">
+                <option>English</option>
+                <option>Urdu</option>
+              </select>
+            </div>
+
+            <div class="col-12 col-md-6">
+              <label for="currency" class="form-label">Payroll Currency</label>
+              <select id="currency" class="form-select">
+                <option>PKR — Pakistani Rupee</option>
+                <option>USD — US Dollar</option>
+                <option>AED — UAE Dirham</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="text-end mt-4">
+            <button type="button" class="btn-teal">
+              Save Preferences
+            </button>
+          </div>
+        </form>
+      </section>
+
+      <!-- Leave Policies -->
+      <section class="panel" id="leave-policy">
+        <div class="section-heading">
+          <div class="section-icon">▣</div>
+          <div>
+            <h2 class="section-title">Leave Policies</h2>
+            <p class="muted mb-0">
+              Define leave allowances and approval expectations.
+            </p>
+          </div>
+        </div>
+
+        <div class="info-box mb-4">
+          These are configurable policy examples, not default legal entitlements.
+          Confirm your organization's rules before applying them.
+        </div>
+
+        <form>
+          <div class="row g-3">
+            <div class="col-12 col-md-6">
+              <label for="annualLeave" class="form-label">
+                Annual Leave Allowance (days)
+              </label>
+              <input
+                id="annualLeave"
+                class="form-control"
+                type="number"
+                min="0"
+                placeholder="Set annual allowance"
+              >
+            </div>
+
+            <div class="col-12 col-md-6">
+              <label for="sickLeave" class="form-label">
+                Sick Leave Allowance (days)
+              </label>
+              <input
+                id="sickLeave"
+                class="form-control"
+                type="number"
+                min="0"
+                placeholder="Set sick leave allowance"
+              >
+            </div>
+
+            <div class="col-12 col-md-6">
+              <label for="noticePeriod" class="form-label">
+                Recommended Request Notice (days)
+              </label>
+              <input
+                id="noticePeriod"
+                class="form-control"
+                type="number"
+                min="0"
+                placeholder="Set notice period"
+              >
+            </div>
+
+            <div class="col-12 col-md-6">
+              <label for="approvalRule" class="form-label">
+                Approval Requirement
+              </label>
+              <select id="approvalRule" class="form-select">
+                <option value="">Select approval rule</option>
+                <option>HR approval required</option>
+                <option>Manager approval required</option>
+                <option>Manager and HR approval required</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="text-end mt-4">
+            <button type="button" class="btn-teal">
+              Save Leave Policy
+            </button>
+          </div>
+        </form>
+      </section>
+
+      <!-- Security -->
+      <section class="panel" id="security">
+        <div class="section-heading">
+          <div class="section-icon">♙</div>
+          <div>
+            <h2 class="section-title">Security & Account</h2>
+            <p class="muted mb-0">
+              Review account-security options.
+            </p>
+          </div>
+        </div>
+
+        <div class="security-row">
+          <div>
+            <div class="security-title">Password Management</div>
+            <div class="security-description">
+              Password changes require a secure authentication system.
+            </div>
+          </div>
+          <button type="button" class="btn-soft">Manage</button>
+        </div>
+
+        <div class="security-row">
+          <div>
+            <div class="security-title">Account Access</div>
+            <div class="security-description">
+              Role-based access must be enforced by the application backend.
+            </div>
+          </div>
+          <span class="badge text-bg-light">Not connected</span>
+        </div>
+
+        <div class="security-row">
+          <div>
+            <div class="security-title">Sign-in Protection</div>
+            <div class="security-description">
+              Configure authentication and session protection when supported.
+            </div>
+          </div>
+          <span class="badge text-bg-light">Not connected</span>
+        </div>
+      </section>
+
+      <div class="info-box">
+        <strong>Development note:</strong> This settings page is currently a
+        front-end interface. Saving company information, enforcing access
+        permissions and changing passwords require a permitted backend or
+        other approved logic layer.
+      </div>
+
+      <footer class="footer">
+        HCM Lite · Workspace Settings
+      </footer>
+
+    </main>
+  </div>
+</body>
+</html>
